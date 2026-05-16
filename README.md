@@ -92,4 +92,4 @@ This project is licensed under the [MIT License](LICENSE).
 
 ---
 
-<p align="center">Built with ❤️ using Streamlit · n8n · Groq · SerpAPI</p>
+<p align="center">Built with ❤️ using Streamlit · n8n </p>
