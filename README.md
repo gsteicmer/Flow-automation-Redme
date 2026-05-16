@@ -38,42 +38,6 @@ Streamlit displays Score + Verdict + Analysis
 
 ---
 
-## 📦 Installation
-
-### 1. Clone the repository
-
-```bash
-git clone https://github.com/your-username/founderlogic-ai.git
-cd founderlogic-ai
-```
-
-### 2. Install dependencies
-
-```bash
-pip install streamlit requests
-```
-
-### 3. Configure your n8n Webhook URL
-
-Open `app.py` and replace the placeholder with your **Production Webhook URL** from n8n:
-
-```python
-webhook_url = "https://your-domain.app.n8n.cloud/webhook/your-id-here"
-```
-
-> ⚠️ Make sure your n8n workflow is set to **Active** before running.
-
----
-
-## ▶️ Running the App
-
-```bash
-python -m streamlit run app.py
-```
-
-> Use `python -m streamlit` if `streamlit` is not recognized in your terminal PATH.
-
----
 
 ## 📤 Expected n8n Response Format
 
@@ -102,24 +66,6 @@ The `Respond to Webhook` node in n8n must return a JSON with exactly these field
 - 📝 **Detailed Analysis** returned by the AI Agent
 - ⏳ **Spinner** while the agent searches and processes
 - 🛡️ **Robust error handling** with user-friendly messages
-
----
-
-## 🔐 Security Notes
-
-- Never commit your real webhook URL to a public repository
-- Consider using a `.env` file and `python-dotenv` to manage secrets:
-
-```python
-# .env
-N8N_WEBHOOK_URL=https://your-domain.app.n8n.cloud/webhook/your-id
-
-# app.py
-from dotenv import load_dotenv
-import os
-load_dotenv()
-webhook_url = os.getenv("N8N_WEBHOOK_URL")
-```
 
 ---
 
